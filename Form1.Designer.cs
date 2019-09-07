@@ -85,7 +85,6 @@
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "From B64:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtFromVL64
             // 
@@ -190,6 +189,7 @@
             this.txtDecodeOutput.Location = new System.Drawing.Point(8, 90);
             this.txtDecodeOutput.Multiline = true;
             this.txtDecodeOutput.Name = "txtDecodeOutput";
+            this.txtDecodeOutput.ReadOnly = true;
             this.txtDecodeOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDecodeOutput.Size = new System.Drawing.Size(355, 127);
             this.txtDecodeOutput.TabIndex = 3;

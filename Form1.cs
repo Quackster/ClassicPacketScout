@@ -22,11 +22,6 @@ namespace ClassicPacketScout
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnToB64_Click(object sender, EventArgs e)
         {
             try
@@ -89,6 +84,7 @@ namespace ClassicPacketScout
 
         private void btnDecode_Click(object sender, EventArgs e)
         {
+            txtDecodeOutput.Text = "";
             string leftToDecode = txtVL64.Text;
 
             while (leftToDecode.Length > 0)

@@ -8,3 +8,13 @@ C:\Users\Alex\source\repos\ClassicPacketScout\ClassicPacketScout\bin\Debug\Class
 C:\Users\Alex\source\repos\ClassicPacketScout\ClassicPacketScout\bin\Debug\ClassicPacketScout.pdb
 C:\Users\Alex\source\repos\ClassicPacketScout\ClassicPacketScout\obj\Debug\ClassicPacketScout.exe
 C:\Users\Alex\source\repos\ClassicPacketScout\ClassicPacketScout\obj\Debug\ClassicPacketScout.pdb
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\bin\Debug\ClassicPacketScout.exe.config
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\bin\Debug\ClassicPacketScout.exe
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\bin\Debug\ClassicPacketScout.pdb
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\obj\Debug\ClassicPacketScout.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\obj\Debug\ClassicPacketScout.Form1.resources
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\obj\Debug\ClassicPacketScout.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\obj\Debug\ClassicPacketScout.csproj.GenerateResource.cache
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\obj\Debug\ClassicPacketScout.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\obj\Debug\ClassicPacketScout.exe
+C:\Users\Alex\Documents\GitHub\ClassicPacketScout\obj\Debug\ClassicPacketScout.pdb
