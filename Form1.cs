@@ -87,6 +87,7 @@ namespace ClassicPacketScout
             txtDecodeOutput.Text = "";
             string leftToDecode = txtVL64.Text;
 
+            int decoded = 0;
             while (leftToDecode.Length > 0)
             {
                 int length;
@@ -99,7 +100,9 @@ namespace ClassicPacketScout
                 }
                 else
                 {
+                    decoded++;
                     txtDecodeOutput.Text += leftToDecode.Substring(0, length) + " = " + value + Environment.NewLine;
+                    lblDecoded.Text = string.Format("Integers decoded: {0}", decoded);
                 }
 
                 leftToDecode = leftToDecode.Substring(length);

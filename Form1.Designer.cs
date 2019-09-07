@@ -47,6 +47,7 @@
             this.txtVL64 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblDecoded = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -172,6 +173,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblDecoded);
             this.tabPage1.Controls.Add(this.txtDecodeOutput);
             this.tabPage1.Controls.Add(this.btnDecode);
             this.tabPage1.Controls.Add(this.txtVL64);
@@ -199,7 +201,7 @@
             // 
             this.btnDecode.Location = new System.Drawing.Point(8, 58);
             this.btnDecode.Name = "btnDecode";
-            this.btnDecode.Size = new System.Drawing.Size(355, 26);
+            this.btnDecode.Size = new System.Drawing.Size(209, 26);
             this.btnDecode.TabIndex = 2;
             this.btnDecode.Text = "Decode \'n\' split";
             this.btnDecode.UseVisualStyleBackColor = true;
@@ -244,11 +246,20 @@
             this.tabPage2.Text = "VL64 & B64 Encoder/Decoder";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // lblDecoded
+            // 
+            this.lblDecoded.AutoSize = true;
+            this.lblDecoded.Location = new System.Drawing.Point(223, 65);
+            this.lblDecoded.Name = "lblDecoded";
+            this.lblDecoded.Size = new System.Drawing.Size(102, 13);
+            this.lblDecoded.TabIndex = 4;
+            this.lblDecoded.Text = "Integers decoded: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 266);
+            this.ClientSize = new System.Drawing.Size(392, 265);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "ClassicPacketScout - By Quackster";
@@ -283,6 +294,7 @@
         private System.Windows.Forms.TextBox txtDecodeOutput;
         private System.Windows.Forms.Button btnDecode;
         private System.Windows.Forms.TextBox txtVL64;
+        private System.Windows.Forms.Label lblDecoded;
     }
 }
 
