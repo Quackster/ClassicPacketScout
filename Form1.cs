@@ -85,6 +85,8 @@ namespace ClassicPacketScout
         private void btnDecode_Click(object sender, EventArgs e)
         {
             txtDecodeOutput.Text = "";
+            lblDecoded.Text = string.Format("Integers decoded: {0}", 0);
+
             string leftToDecode = txtVL64.Text;
 
             int decoded = 0;

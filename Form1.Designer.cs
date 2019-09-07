@@ -42,12 +42,12 @@
             this.btnFromVL64 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblDecoded = new System.Windows.Forms.Label();
             this.txtDecodeOutput = new System.Windows.Forms.TextBox();
             this.btnDecode = new System.Windows.Forms.Button();
             this.txtVL64 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblDecoded = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -168,7 +168,7 @@
             this.tabControl1.Location = new System.Drawing.Point(8, 11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(378, 249);
+            this.tabControl1.Size = new System.Drawing.Size(378, 275);
             this.tabControl1.TabIndex = 12;
             // 
             // tabPage1
@@ -181,19 +181,29 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(370, 223);
+            this.tabPage1.Size = new System.Drawing.Size(370, 249);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "VL64 Analyser";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lblDecoded
+            // 
+            this.lblDecoded.AutoSize = true;
+            this.lblDecoded.Location = new System.Drawing.Point(223, 65);
+            this.lblDecoded.Name = "lblDecoded";
+            this.lblDecoded.Size = new System.Drawing.Size(102, 13);
+            this.lblDecoded.TabIndex = 4;
+            this.lblDecoded.Text = "Integers decoded: 0";
+            // 
             // txtDecodeOutput
             // 
+            this.txtDecodeOutput.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDecodeOutput.Location = new System.Drawing.Point(8, 90);
             this.txtDecodeOutput.Multiline = true;
             this.txtDecodeOutput.Name = "txtDecodeOutput";
             this.txtDecodeOutput.ReadOnly = true;
             this.txtDecodeOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDecodeOutput.Size = new System.Drawing.Size(355, 127);
+            this.txtDecodeOutput.Size = new System.Drawing.Size(355, 153);
             this.txtDecodeOutput.TabIndex = 3;
             this.txtDecodeOutput.WordWrap = false;
             // 
@@ -246,20 +256,11 @@
             this.tabPage2.Text = "VL64 & B64 Encoder/Decoder";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lblDecoded
-            // 
-            this.lblDecoded.AutoSize = true;
-            this.lblDecoded.Location = new System.Drawing.Point(223, 65);
-            this.lblDecoded.Name = "lblDecoded";
-            this.lblDecoded.Size = new System.Drawing.Size(102, 13);
-            this.lblDecoded.TabIndex = 4;
-            this.lblDecoded.Text = "Integers decoded: 0";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 265);
+            this.ClientSize = new System.Drawing.Size(392, 290);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "ClassicPacketScout - By Quackster";
