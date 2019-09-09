@@ -28,6 +28,11 @@ namespace ClassicPacketScout
             {
                 string value = Base64Encoding.EncodeInt32(int.Parse(txtToB64.Text), 2);
                 txtFromB64.Text = value;
+
+                if (txtToB64.Text != Base64Encoding.DecodeInt32(value).ToString())
+                {
+                    txtFromB64.Text = "ERROR";
+                }
             }
             catch (Exception ex)
             {
@@ -43,6 +48,11 @@ namespace ClassicPacketScout
                 {
                     int value = Base64Encoding.DecodeInt32(txtFromB64.Text);
                     txtToB64.Text = value + "";
+
+                    if (txtFromB64.Text != Base64Encoding.EncodeInt32(value, 2).ToString())
+                    {
+                        txtToB64.Text = "ERROR";
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -61,6 +71,12 @@ namespace ClassicPacketScout
             {
                 string value = WireEncoding.EncodeInt32(int.Parse(txtToVL64.Text));
                 txtFromVL64.Text = value;
+
+                int len;
+                if (WireEncoding.DecodeInt32(value, out len).ToString() != txtToVL64.Text)
+                {
+                    txtFromVL64.Text = "ERROR";
+                }
             }
             catch (Exception ex)
             {
@@ -75,6 +91,11 @@ namespace ClassicPacketScout
                 int i;
                 int value = WireEncoding.DecodeInt32(txtFromVL64.Text, out i);
                 txtToVL64.Text = value + "";
+
+                if (WireEncoding.EncodeInt32(value).ToString() != txtFromVL64.Text)
+                {
+                    txtToVL64.Text = "ERROR";
+                }
             }
             catch (Exception ex)
             {
