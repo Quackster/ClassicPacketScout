@@ -31,7 +31,7 @@ namespace ClassicPacketScout
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                txtFromB64.Text = "ERROR";
             }
         }
 
@@ -51,7 +51,7 @@ namespace ClassicPacketScout
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                txtToB64.Text = "ERROR";
             }
         }
 
@@ -64,7 +64,7 @@ namespace ClassicPacketScout
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                txtFromVL64.Text = "ERROR";
             }
         }
 
@@ -78,7 +78,7 @@ namespace ClassicPacketScout
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                txtToVL64.Text = "ERROR";
             }
         }
 
@@ -93,18 +93,39 @@ namespace ClassicPacketScout
             while (leftToDecode.Length > 0)
             {
                 int length;
-                int value = WireEncoding.DecodeInt32(leftToDecode, out length);
+                int value = 0;
+
+                try
+                {
+                    value = WireEncoding.DecodeInt32(leftToDecode, out length);
+                }
+                catch
+                {
+                    length = 0;
+                }
+
+                bool raiseError = false;
 
                 if (length == 0)
                 {
-                    length = leftToDecode.Length;
-                    txtDecodeOutput.Text += leftToDecode.Substring(0, length) + " = ERROR" + Environment.NewLine;
-                }
-                else
+                    raiseError = true;
+                } 
+                else if (leftToDecode.Substring(0, length).ToString() != WireEncoding.EncodeInt32(value)) 
                 {
+                    raiseError = true;
+                }
+
+                if (!raiseError)
+                {
+
                     decoded++;
                     txtDecodeOutput.Text += leftToDecode.Substring(0, length) + " = " + value + Environment.NewLine;
                     lblDecoded.Text = string.Format("Integers decoded: {0}", decoded);
+                }
+                else
+                {
+                    length = leftToDecode.Length;
+                    txtDecodeOutput.Text += leftToDecode.Substring(0, length) + " = ERROR" + Environment.NewLine;
                 }
 
                 leftToDecode = leftToDecode.Substring(length);
